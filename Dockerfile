@@ -9,6 +9,7 @@ WORKDIR /install
 
 COPY ./requirements.txt requirements.txt
 
+RUN pip install --no-cache-dir --upgrade --prefix="/install" torch torchvision --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir --upgrade --prefix="/install" -r requirements.txt
 
 FROM python:3.10-slim-bullseye as final
