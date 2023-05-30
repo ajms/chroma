@@ -58,8 +58,6 @@ class Clickhouse(DB):
 
         self._settings.require("clickhouse_host")
         self._settings.require("clickhouse_port")
-        self._settings.require("clickhouse_user")
-        self._settings.require("clickhouse_password")
 
     def _init_conn(self):
         common.set_setting("autogenerate_session_id", False)
